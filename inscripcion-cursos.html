@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Taller — Inscripción</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <a href="index.html">
+          <img src="img/isologo-taller.png" alt="Isologo El Taller">
+          <span>el taller</span>
+        </a>
+      </div>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="que-es-la-ceramica.html">CERÁMICA</a>
+        <a href="cursos.html">CURSOS</a>
+        <a href="inscripcion-cursos.html" aria-current="page">INSCRIPCIÓN</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form" aria-labelledby="title">
+        <h1 id="title">Inscripción a los cursos</h1>
+        <p class="muted">Los campos señalados con * son obligatorios</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Detalles de la inscripción</legend>
+            <div class="grid-2">
+              <div>
+                <label for="first-name">Nombre *</label>
+                <input id="first-name" name="first-name" type="text" required maxlength="64" autocomplete="given-name" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'\-\s]{2,64}$" title="Solo letras, espacios, apóstrofes o guiones. 2–64 caracteres">
+              </div>
+              <div>
+                <label for="last-name">Apellidos *</label>
+                <input id="last-name" name="last-name" type="text" required maxlength="128" autocomplete="family-name" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'\-\s]{2,128}$" title="Solo letras, espacios, apóstrofes o guiones. 2–128 caracteres">
+              </div>
+
+              <div>
+                <label for="email">Correo electrónico *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div>
+                <label for="phone">Teléfono *</label>
+                <input id="phone" name="phone" type="tel" required inputmode="tel" placeholder="000 000 000">
+              </div>
+
+              <div>
+                <label for="birth">Fecha de nacimiento *</label>
+                <input id="birth" name="birth" type="date" required>
+              </div>
+              <div>
+                <label for="course">Curso *</label>
+                <select id="course" name="course" required>
+                  <option value="" selected>Selecciona el curso</option>
+                  <option>Torno</option>
+                  <option>Cerámica</option>
+                  <option>Modelado</option>
+                  <option>Esmaltes</option>
+                  <option>Joyería cerámica</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Otras informaciones</legend>
+            <div class="grid-1">
+              <div>
+                <p>¿Has hecho otros cursos con nosotros? *</p>
+                <label><input type="radio" name="has-done" value="si" required> Sí</label>
+                <label><input type="radio" name="has-done" value="no" required> No</label>
+              </div>
+              <div>
+                <label for="notes">¿Quieres comentar o preguntar algó?</label>
+                <textarea id="notes" name="notes" placeholder="Escribe aquí tus comentarios"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Elige un método de pago *</legend>
+            <div class="grid-1">
+              <label><input type="radio" name="payment" value="transferencia" required> Transferencia</label>
+              <label><input type="radio" name="payment" value="tarjeta" required> Tarjeta de débito / crédito</label>
+              <label><input type="radio" name="payment" value="efectivo" required> En efectivo</label>
+            </div>
+          </fieldset>
+
+          <p class="muted">
+            INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE EL TALLER. Finalidades: recogida de datos para la inscripción como socio del interesado.
+            Legitimación: Consentimiento del interesado. Destinatarios: No están previstas cesiones de datos a terceros, excepto obligación legal.
+            Derechos: Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a info@eltaller.es.
+            Información Adicional: Puede ampliar la información en el enlace de Aviso Legal y Política de privacidad.
+          </p>
+
+          <label><input type="checkbox" name="privacy" required> He leído y acepto la <a href="#">política de privacidad</a> *</label>
+
+          <div class="actions">
+            <button type="submit" class="btn">INSCRIBEME</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-menu" aria-label="Términos legales">
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+      </div>
+      <div class="credits">2025 © Joseph Z Gaitan</div>
+    </footer>
+  </body>
+</html>

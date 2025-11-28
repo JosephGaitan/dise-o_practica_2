@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-teal: #6bdec8;
+  --color-burnt: #942c0b;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--color-black);
+  background: var(--color-white);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-burnt);
+  text-decoration: none;
+}
+
+main a {
+  border-bottom: 1px dotted var(--color-burnt);
+}
+
+main a:hover {
+  border-bottom-style: solid;
+}
+
+header.site-header {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.brand a {
+  color: var(--color-white);
+}
+
+.brand img {
+  width: 28px;
+  height: 28px;
+}
+
+nav.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 1rem 1rem;
+}
+
+nav.site-nav a {
+  color: var(--color-white);
+}
+
+nav.site-nav a:hover {
+  color: var(--color-teal);
+}
+
+nav.site-nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-white);
+}
+
+.page {
+  width: min(860px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+footer.site-footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 1rem;
+}
+
+footer.site-footer a {
+  color: var(--color-white);
+}
+
+footer.site-footer a:hover {
+  color: var(--color-teal);
+}
+
+footer.site-footer .footer-menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer.site-footer .credits {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Index (home) */
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: url("../img/home-hero.jpg") center/cover no-repeat;
+}
+
+.home .overlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.home header,
+.home footer {
+  background: transparent;
+}
+
+.home nav.site-nav a {
+  color: var(--color-white);
+}
+
+.home main {
+  display: grid;
+  place-items: center;
+}
+
+.home .hero {
+  text-align: center;
+  color: var(--color-white);
+}
+
+.home .hero img {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+}
+
+.home .title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home .tagline {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+}
+
+/* Article */
+.article {
+  width: min(860px, 92%);
+  margin: 0 auto;
+}
+
+.article h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.article figure {
+  margin: 1rem 0;
+}
+
+.article figcaption {
+  font-size: 0.875rem;
+  color: #444;
+}
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin: 1.5rem 0;
+}
+
+/* Courses table */
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.course-table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.course-table th,
+.course-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.course-table thead th {
+  font-weight: 700;
+}
+
+.course-table tbody tr:nth-child(even) {
+  background: var(--color-teal);
+}
+
+/* Form */
+.form {
+  width: min(860px, 92%);
+  margin: 0 auto;
+}
+
+.form fieldset {
+  border: 2px solid var(--color-black);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form legend {
+  font-weight: 700;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--color-black);
+  border-radius: 2px;
+  font: inherit;
+  background: var(--color-white);
+}
+
+textarea {
+  min-height: 140px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-teal);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  background: var(--color-burnt);
+  color: var(--color-white);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.muted {
+  color: #444;
+}
